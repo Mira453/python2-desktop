@@ -1,21 +1,34 @@
 class Student:
 
-    def __init__(self, name =&quot;John Doe&quot;, courses =[]):
-    self.name = name
-    self.courses = courses
-    print(&quot;Створено об’єкт для &quot;+ name)
-    
-    def printDetails(self):
-    print(&quot;Ім’я: &quot;, self.name)
-    print(&quot;Курси: &quot;, self.courses)
-    def enroll(self, course):
+    def __init__(self, name="John Doe", courses=None, phone=None, email=None, degree=None):
+        if courses is None:
+            courses = []
+        self.name = name
+        self.courses = courses
+        self.phone = phone
+        self.email = email
+        self.degree = degree
+        print("Створено об’єкт для " + name)
 
-    self.courses.append(course)
-    student1 = Student(&quot;Mary&quot;, [&quot;L548&quot;])
-    print(&quot;Уведіть курси, які вивчає&quot;, student1.name)
-    newcourse = input (&quot;Уведіть номер курсу або &#39;stop&#39; &quot;)
-    while newcourse != &quot;stop&quot;:
+    def printDetails(self):
+        print("Ім'я:", self.name)
+        print("Курси:", self.courses)
+        print("Телефон:", self.phone)
+        print("Email:", self.email)
+        print("Ступінь:", self.degree)
+
+    def enroll(self, course):
+        self.courses.append(course)
+
+
+student1 = Student("Mary", ["L548"], phone="123-456-7890", email="mary@example.com", degree="Bachelor")
+
+print("Уведіть курси, які вивчає", student1.name)
+newcourse = input("Уведіть номер курсу або 'stop': ")
+
+while newcourse != "stop":
     student1.enroll(newcourse)
-    print(&quot;Уведіть курси, які вивчає&quot;, student1.name)
-    newcourse = input (&quot;Уведіть номер курсу або &#39;stop&#39; &quot;)
-    tudent1.printDetails()
+    print("Уведіть курси, які вивчає", student1.name)
+    newcourse = input("Уведіть номер курсу або 'stop': ")
+
+student1.printDetails()

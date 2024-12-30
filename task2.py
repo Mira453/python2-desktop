@@ -13,6 +13,6 @@ def create_array(*args):
             
     return arr
     
-result = create_array(2, 7.9, "hhj", 10)
+result = create_array(2, 7, 45, 10)
 if result is not None:
     print("Створений масив:", result)
