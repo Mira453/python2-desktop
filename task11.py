@@ -8,3 +8,9 @@ print("Найбільші елементи в кожному рядку: ", max_
 
 min_in_rows = np.min(matrix, axis=1)
 print("Найменший елемент в кожному рядку: ", min_in_rows)
+
+max_in_columns = np.max(matrix, axis=0)
+print("Найбільші елементи в кожному стовпці:", max_in_columns)
+
+min_in_columns = np.min(matrix, axis=0)
+print("Найменші елементи в кожному стовпці:", min_in_columns)
